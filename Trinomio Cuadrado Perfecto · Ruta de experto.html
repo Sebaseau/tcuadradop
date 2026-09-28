@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trinomio Cuadrado Perfecto · Ruta de experto</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf7f0;--card:#fff;--ink:#14213d;--mut:#5b6478;--line:#e6dfcf;--a:#0b7d72;--b:#a87415;--m:#b93a62;--acc:#14213d;--onacc:#fff;--soft:#f1ece0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1428;--card:#141f3a;--ink:#eef1f8;--mut:#9aa6c0;--line:#25335a;--a:#3cd0be;--b:#e6b95a;--m:#ff7fa3;--acc:#e6b95a;--onacc:#0c1428;--soft:#1a2748}}
+:root[data-theme="dark"]{--bg:#0c1428;--card:#141f3a;--ink:#eef1f8;--mut:#9aa6c0;--line:#25335a;--a:#3cd0be;--b:#e6b95a;--m:#ff7fa3;--acc:#e6b95a;--onacc:#0c1428;--soft:#1a2748}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.2;margin:0 0 .5em}
+h2{font-size:1.9rem}h3{font-size:1.2rem}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:10px 20px;max-width:1040px;margin:0 auto;flex-wrap:wrap}
+.logo{font-family:'Playfair Display',Georgia,serif;font-weight:800;font-size:1.15rem}
+.crumbs{color:var(--mut);font-size:.85rem}
+.tools{display:flex;gap:8px}
+input,button{font:inherit;color:inherit}
+.tools input{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);width:150px}
+.btn{cursor:pointer;border:1px solid var(--line);background:var(--card);padding:7px 14px;border-radius:8px}
+.btn:hover{border-color:var(--acc)}
+.pri{background:var(--acc);color:var(--onacc);border-color:var(--acc);font-weight:600;padding:11px 22px;text-decoration:none;display:inline-block;border-radius:8px}
+#prog{height:3px;width:0;background:linear-gradient(90deg,var(--a),var(--b),var(--m))}
+:focus-visible{outline:2px solid var(--m);outline-offset:2px}
+.hero{padding:64px 0 40px;border-bottom:1px solid var(--line)}
+.hero h1{font-size:clamp(2.3rem,7vw,4.2rem);font-weight:800}
+.hero p.sub{max-width:60ch;color:var(--mut);font-size:1.1rem}
+.blk{display:inline-block;font-size:.78rem;font-weight:600;background:var(--acc);color:var(--onacc);border-radius:6px;padding:2px 10px;margin:0 0 10px}
+.tag{display:inline-block;border:1px solid var(--line);background:var(--soft);border-radius:99px;padding:2px 12px;font-size:.85rem;margin:2px 4px 2px 0}
+.metrics{display:flex;gap:28px;margin:18px 0;flex-wrap:wrap}
+.metrics b{display:block;font-size:1.2rem}
+.metrics span{color:var(--mut);font-size:.85rem}
+.road{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:26px 0;padding:0;list-style:none;counter-reset:s}
+.road a{display:block;text-decoration:none;padding:12px 14px;border-left:4px solid var(--a);background:var(--card);border-radius:0 8px 8px 0}
+.road li:nth-child(2) a{border-color:var(--b)}.road li:nth-child(3) a{border-color:var(--m)}.road li:nth-child(4) a{border-color:var(--a)}.road li:nth-child(5) a{border-color:var(--b)}
+.road small{color:var(--mut);display:block}
+section{padding:52px 0;border-bottom:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.hero{padding-top:40px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+.f{font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;text-align:center;padding:14px;background:var(--soft);border-radius:10px;margin:12px 0;overflow-x:auto}
+.a{color:var(--a);font-weight:600}.b{color:var(--b);font-weight:600}.m{color:var(--m);font-weight:600}
+ol.st{padding-left:20px}
+table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
+.scroll{overflow-x:auto}
+.ctrl{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.ctrl label{display:flex;gap:8px;align-items:center}
+input[type=range]{accent-color:var(--m)}
+.out{min-height:170px}
+.res{background:var(--acc);color:var(--onacc);border-radius:10px;padding:12px 16px;font-weight:600;margin-top:10px;font-family:'Playfair Display',Georgia,serif;font-size:1.25rem}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:8px 0;padding:10px 16px}
+summary{cursor:pointer;font-weight:600}
+.lv{margin:26px 0 6px;color:var(--mut);font-weight:600}
+.warn{border-left:5px solid var(--m);background:var(--soft);padding:12px 16px;border-radius:0 10px 10px 0;margin:10px 0}
+.ok{color:var(--a);font-weight:600}.no{color:var(--m);font-weight:600}
+.opt{display:block;width:100%;text-align:left;margin:6px 0}
+.opt.right{border-color:var(--a);background:color-mix(in srgb,var(--a) 18%,var(--card))}
+.opt.wrong{border-color:var(--m);background:color-mix(in srgb,var(--m) 18%,var(--card))}
+footer{padding:44px 0 60px}
+.dl{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+.nav{display:flex;justify-content:space-between;gap:12px;margin-top:22px;flex-wrap:wrap;color:var(--mut)}
+svg text{font-family:Inter,sans-serif;font-size:15px;fill:#fff;font-weight:600}
+@media print{header,.tools,.dl,#gen,#sim{display:none}}
+</style>
+</head>
+<body>
+<header>
+<div class="bar">
+<div><div class="logo">Álgebra Viva</div><span class="blk">Bloque 1 · Header y barra de progreso</span><div class="crumbs">Matemáticas › Álgebra › Productos notables › Trinomio cuadrado perfecto</div></div>
+<div class="tools"><input id="q" type="search" placeholder="Buscar concepto…" aria-label="Buscar concepto"><button class="btn" id="th" aria-label="Cambiar tema">Claro / Oscuro</button></div>
+</div>
+<div id="prog"></div>
+</header>
+
+<main>
+<!-- BLOQUE 2 -->
+<div class="hero"><div class="wrap">
+<span class="blk">Bloque 2 · Hero: presentación del tema</span><br><h1>Trinomio Cuadrado Perfecto</h1>
+<p class="sub">Aprende a reconocer y factorizar en segundos expresiones como <b>x² + 10x + 25</b>, convirtiéndolas en <b>(x + 5)²</b>. Ruta guiada, práctica y autoevaluación.</p>
+<div class="metrics"><div><b>45 min</b><span>tiempo de estudio</span></div><div><b>Intermedio</b><span>dificultad</span></div><div><b>5 pasos</b><span>para dominarlo</span></div></div>
+<div>Prerrequisitos: <span class="tag">Potencias</span><span class="tag">Raíz cuadrada</span><span class="tag">Propiedad distributiva</span><span class="tag">Términos semejantes</span></div>
+<ol class="road">
+<li><a href="#base"><b>1. Base</b><small>Cuadrados y raíces</small></a></li>
+<li><a href="#teoria"><b>2. Teoría</b><small>Fórmula y elementos</small></a></li>
+<li><a href="#sim"><b>3. Simulador</b><small>Manipula y observa</small></a></li>
+<li><a href="#ejercicios"><b>4. Ejercicios</b><small>Resueltos por nivel</small></a></li>
+<li><a href="#eval"><b>5. Evaluación</b><small>Errores, práctica y test</small></a></li>
+</ol>
+<a class="pri" href="#base">Comenzar lección</a>
+</div></div>
+
+<div class="wrap">
+<!-- BLOQUE 3 -->
+<section id="base">
+<span class="blk">Bloque 3 · Fundamentación atómica</span><br><h2>Base atómica: cuadrado y raíz</h2>
+<div class="grid">
+<div class="card">
+<h3>Concepto</h3>
+<p>Elevar al cuadrado es multiplicar algo por sí mismo. La raíz cuadrada hace el camino inverso. Todo el tema se apoya en este par de operaciones.</p>
+<div class="f">(a)² = a · a &nbsp;&nbsp; √(a²) = a</div>
+<p>Con coeficientes: <b>(4x)² = 16x²</b> y por eso <b>√(16x²) = 4x</b>.</p>
+</div>
+<div class="card">
+<h3>Algoritmo de la raíz de un monomio</h3>
+<ol class="st"><li>Saca la raíz del <b>coeficiente</b> (√25 = 5).</li><li>Divide el <b>exponente</b> entre 2 (x² → x).</li><li>Junta ambos resultados.</li></ol>
+<p><b>Ejemplo flash:</b> √(49m²) → √49 = 7 y m² → m, así que <span class="ok">7m</span>.</p>
+<p>Cuadrados que debes reconocer: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100.</p>
+</div>
+</div>
+</section>
+
+<!-- BLOQUE 4 -->
+<section id="teoria">
+<span class="blk">Bloque 4 · Marco teórico y modelo conceptual</span><br><h2>Marco teórico</h2>
+<div class="grid">
+<div class="card">
+<h3>Definición formal</h3>
+<p>Un trinomio cuadrado perfecto (TCP) es el resultado de elevar un binomio al cuadrado. Tiene tres términos.</p>
+<div class="f"><span class="a">a²</span> ± <span class="m">2ab</span> + <span class="b">b²</span> = (a ± b)²</div>
+<p><b>Por qué funciona:</b> (a+b)(a+b) = a² + ab + ab + b² = a² + 2ab + b². Para la resta, (a−b)(a−b) = a² − 2ab + b².</p>
+</div>
+<div class="card" style="text-align:center">
+<h3>Modelo de áreas: (a + b)²</h3>
+<svg viewBox="0 0 300 290" role="img" aria-label="Cuadrado de lado a más b dividido en a al cuadrado, dos rectángulos ab y b al cuadrado" style="max-width:300px;width:100%">
+<rect x="30" y="30" width="150" height="150" fill="#0b7d72"/><text x="88" y="110">a²</text>
+<rect x="180" y="30" width="80" height="150" fill="#b93a62"/><text x="205" y="110">ab</text>
+<rect x="30" y="180" width="150" height="80" fill="#b93a62"/><text x="95" y="225">ab</text>
+<rect x="180" y="180" width="80" height="80" fill="#a87415"/><text x="208" y="225">b²</text>
+<text x="88" y="20" style="fill:currentColor">a</text><text x="212" y="20" style="fill:currentColor">b</text>
+</svg>
+<p>El área total suma <span class="a">a²</span> + <span class="m">ab + ab</span> + <span class="b">b²</span>.</p>
+</div>
+</div>
+<div class="card" style="margin-top:22px">
+<h3>Regla visual de los 3 términos</h3>
+<div class="f"><span class="a">x²</span> + <span class="m">10x</span> + <span class="b">25</span></div>
+<div class="scroll"><table>
+<tr><th>Término</th><th>Qué es</th><th>Ejemplo</th></tr>
+<tr><td class="a">Primero</td><td>Cuadrado del primer elemento del binomio</td><td>x² viene de (x)²</td></tr>
+<tr><td class="m">Segundo (central)</td><td>Doble producto de las raíces de los extremos</td><td>10x viene de 2·(x)·(5)</td></tr>
+<tr><td class="b">Tercero</td><td>Cuadrado del segundo elemento</td><td>25 viene de (5)²</td></tr>
+</table></div>
+<p><b>Signo:</b> si el término central es <b>+</b>, el binomio es una suma; si es <b>−</b>, es una resta. El tercer término siempre es positivo.</p>
+</div>
+<div class="card" style="margin-top:22px">
+<h3>Cómo reconocer un TCP en 5 pasos</h3>
+<ol class="st"><li>Ordena el trinomio (de mayor a menor exponente).</li><li>Verifica que el primer término tenga raíz cuadrada exacta.</li><li>Verifica que el tercer término tenga raíz cuadrada exacta.</li><li>Multiplica por 2 las dos raíces.</li><li>Compara con el término central: si coincide, es un TCP y se factoriza como (raíz1 ± raíz2)². Si no coincide, no lo es.</li></ol>
+</div>
+</section>
+
+<!-- BLOQUE 5 -->
+<section id="sim">
+<span class="blk">Bloque 5 · Demostración e interacción</span><br><h2>Simulador interactivo</h2>
+<p>Elige la raíz de cada extremo y el signo. Verás cómo se forma el TCP y cómo se factoriza.</p>
+<div class="card">
+<div class="ctrl">
+<label>Primer elemento p: <input type="range" id="p" min="1" max="10" value="3"> <b id="pv">3</b></label>
+<label>Segundo elemento q: <input type="range" id="qq" min="1" max="10" value="5"> <b id="qv">5</b></label>
+<button class="btn" id="sg">Signo: +</button>
+</div>
+<div class="ctrl"><span>Ejemplos:</span><button class="btn" data-s="1,5,1">x²+10x+25</button><button class="btn" data-s="2,3,1">4x²+12x+9</button><button class="btn" data-s="3,5,-1">9x²−30x+25</button><button class="btn" data-s="10,2,-1">100x²−40x+4</button></div>
+<div class="out" id="out" aria-live="polite"></div>
+</div>
+</section>
+
+<!-- BLOQUE 6 -->
+<section id="ejercicios">
+<span class="blk">Bloque 6 · Banco de ejercicios resueltos</span><br><h2>Ejercicios resueltos</h2>
+<p>Intenta cada uno primero. Luego abre la solución y compara.</p>
+<div id="ex"></div>
+</section>
+
+<!-- BLOQUE 7 -->
+<section id="eval">
+<span class="blk">Bloque 7 · Práctica, errores comunes y evaluación</span><br><h2>Errores comunes, práctica y test</h2>
+<div class="warn"><b>Error 1: (a + b)² = a² + b².</b> Falta el doble producto. Comprueba con números: (2+3)² = 25, pero 2²+3² = 13.</div>
+<div class="warn"><b>Error 2: sacar mal la raíz.</b> √(25x²) es 5x, no 25x ni 5x². Trabaja el coeficiente y la variable por separado.</div>
+<div class="warn"><b>Error 3: olvidar verificar el término central.</b> x² + 6x + 10 tiene extremos con raíz en x, pero 2·x·√10 no es 6x (10 no es cuadrado perfecto). No es TCP.</div>
+<div class="warn"><b>Error 4: mezclar signos.</b> El signo del binomio lo da el término central. El tercer término nunca cambia de signo.</div>
+
+<div class="card" id="gen" style="margin-top:26px">
+<h3>Generador de práctica</h3>
+<p>Escribe el binomio, por ejemplo <b>3x+5</b> o <b>(3x−5)²</b>.</p>
+<div class="f" id="gq"></div>
+<div class="ctrl"><input id="ga" placeholder="Tu respuesta" aria-label="Tu respuesta" style="padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card)"><button class="btn" id="gc">Comprobar</button><button class="btn" id="gn">Otro ejercicio</button></div>
+<div id="gf"></div>
+</div>
+
+<div class="card" style="margin-top:22px">
+<h3>Mini-test diagnóstico</h3>
+<div id="quiz"></div>
+<p id="score" class="ok"></p>
+</div>
+</section>
+</div>
+</main>
+
+<!-- BLOQUE 8 -->
+<footer><div class="wrap">
+<span class="blk">Bloque 8 · Footer y recursos</span><br><h2>Recursos</h2>
+<div class="dl"><button class="btn" onclick="window.print()">Imprimir o guardar guía en PDF</button></div>
+<div class="card"><b>Hoja de fórmulas</b><div class="f"><span class="a">a²</span> + <span class="m">2ab</span> + <span class="b">b²</span> = (a + b)² &nbsp;|&nbsp; <span class="a">a²</span> − <span class="m">2ab</span> + <span class="b">b²</span> = (a − b)²</div>
+<p>Usos: factorizar, simplificar expresiones, resolver ecuaciones cuadráticas, calcular áreas de cuadrados compuestos y trabajar con energía cinética en física.</p></div>
+<div class="nav"><span>← Anterior: Cuadrado de un binomio</span><span>Siguiente: TCP por suma y resta →</span></div>
+<p style="color:var(--mut);margin-top:26px">Basado en los apuntes de clase de Alexander Manobanda. Dudas: consulta a tu docente.</p>
+</div></footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const co=n=>n===1?'':n, S=s=>s>0?'+':'−';
+// tema
+$('th').onclick=()=>{const r=document.documentElement,c=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');r.dataset.theme=c==='dark'?'light':'dark'};
+// progreso
+addEventListener('scroll',()=>{const h=document.documentElement;$('prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight||1)*100)+'%'});
+// buscador
+$('q').addEventListener('keydown',e=>{if(e.key!=='Enter')return;const t=e.target.value.toLowerCase().trim();if(!t)return;const s=[...document.querySelectorAll('section,.hero,footer')].find(x=>x.textContent.toLowerCase().includes(t));if(s)s.scrollIntoView()});
+// pasos
+function steps(p,q,s,v){const A=p*p,B=2*p*q,C=q*q;return `<ol class="st"><li>Raíz del 1.º: √(${co(A)}${v}²) = <span class="a">${co(p)}${v}</span></li><li>Raíz del 3.º: √${C} = <span class="b">${q}</span></li><li>Doble producto: 2·(${co(p)}${v})·(${q}) = <span class="m">${B}${v}</span>, coincide con el central ✓</li><li>Signo del central: ${S(s)}, entonces el binomio usa ${S(s)}</li></ol><div class="res">(${co(p)}${v} ${S(s)} ${q})²</div>`}
+const tri=(p,q,s,v)=>`<span class="a">${co(p*p)}${v}²</span> <span class="m">${S(s)} ${2*p*q}${v}</span> <span class="b">+ ${q*q}</span>`;
+// simulador
+let sg=1;
+function sim(){const p=+$('p').value,q=+$('qq').value;$('pv').textContent=p;$('qv').textContent=q;$('sg').textContent='Signo: '+S(sg);$('out').innerHTML=`<div class="f">${tri(p,q,sg,'x')}</div>`+steps(p,q,sg,'x')}
+['p','qq'].forEach(i=>$(i).oninput=sim);$('sg').onclick=()=>{sg=-sg;sim()};
+document.querySelectorAll('[data-s]').forEach(b=>b.onclick=()=>{const[a,c,d]=b.dataset.s.split(',');$('p').value=a;$('qq').value=c;sg=+d;sim()});
+sim();
+// ejercicios
+const L=[['Nivel 0 · Raíces de monomios',[['√(4x²)','2x','√4 = 2 y x² → x'],['√(25m²)','5m','√25 = 5 y m² → m'],['√(81y²)','9y','√81 = 9 y y² → y']]],
+['Nivel 1 · Aplicación directa',[[1,4,1,'x'],[1,6,-1,'x'],[1,9,1,'a']]],
+['Nivel 2 · Con coeficientes',[[5,3,1,'x'],[7,5,1,'m'],[8,1,1,'a'],[6,5,-1,'y']]],
+['Nivel 3 · Desafíos',[[10,2,-1,'p'],[9,1,-1,'x'],['x²+6x+10','No es TCP','Raíces: x y √10 (no exacta). Además 2·x·√10 ≠ 6x. Falla la condición del 3.º término.']]]];
+let h='';L.forEach(([t,a])=>{h+=`<div class="lv">${t}</div>`;a.forEach(e=>{let q,b;if(typeof e[0]==='number'){const[p,r,s,v]=e;q=`Factoriza: ${tri(p,r,s,v).replace(/<[^>]+>/g,'')}`;b=steps(p,r,s,v)}else{q=`Factoriza: ${e[0]}`;b=`<p>${e[2]}</p><div class="res">${e[1]}</div>`}h+=`<details><summary>${q}</summary>${b}</details>`})});
+$('ex').innerHTML=h.replace(/(Factoriza: )(\d*[a-z]²) ([+−]) (\d+[a-z]) \+ (\d+)/g,'$1$2 $3 $4 + $5');
+// generador
+let cur;
+function gen(){const p=1+Math.floor(Math.random()*9),q=1+Math.floor(Math.random()*9),s=Math.random()<.5?1:-1,v='xyamn'[Math.floor(Math.random()*5)];cur={p,q,s,v};$('gq').innerHTML=tri(p,q,s,v);$('gf').textContent='';$('ga').value=''}
+$('gn').onclick=gen;
+$('gc').onclick=()=>{const n=x=>x.toLowerCase().replace(/[()\s]/g,'').replace(/(\^2|²)$/,'').replace(/[−–]/g,'-').replace(/\*/g,'');const{p,q,s,v}=cur,ok=n($('ga').value)===`${co(p)}${v}${s>0?'+':'-'}${q}`;$('gf').innerHTML=ok?'<span class="ok">Correcto. ¡Sigue así!</span>':`<span class="no">Aún no. Pista: raíz del 1.º = ${co(p)}${v}, raíz del 3.º = ${q}, signo del central ${S(s)}.</span>`};
+gen();
+// quiz
+const Q=[['¿Cuál es un TCP?',['x² + 4x + 4','x² + 5x + 4','x² + 4x + 5'],0,'2·x·2 = 4x ✓'],['Factoriza x² − 12x + 36',['(x − 6)²','(x + 6)²','(x − 12)²'],0,'Raíces x y 6; central negativo → resta'],['¿Qué falta en 16a² + ___ + 9?',['24a','12a','9a'],0,'2·(4a)·(3) = 24a'],['¿Por qué 4x² + 10x + 9 no es TCP?',['El doble producto es 12x, no 10x','Tiene tres términos','El 9 no es cuadrado'],0,'2·(2x)·(3) = 12x ≠ 10x']];
+let sc=0,dn=0;$('quiz').innerHTML=Q.map((x,i)=>`<div style="margin-bottom:16px"><b>${i+1}. ${x[0]}</b>${x[1].map((o,j)=>`<button class="btn opt" data-i="${i}" data-j="${j}">${o}</button>`).join('')}<small id="w${i}"></small></div>`).join('');
+$('quiz').onclick=e=>{const b=e.target.closest('.opt');if(!b||b.disabled)return;const i=+b.dataset.i,j=+b.dataset.j,x=Q[i];document.querySelectorAll(`[data-i="${i}"]`).forEach(o=>o.disabled=true);b.classList.add(j===x[2]?'right':'wrong');if(j===x[2])sc++;else document.querySelector(`[data-i="${i}"][data-j="${x[2]}"]`).classList.add('right');$('w'+i).textContent=x[3];if(++dn===Q.length)$('score').textContent=`Resultado: ${sc} de ${Q.length}. ${sc===Q.length?'Dominas el tema.':'Repasa los pasos de reconocimiento y vuelve a intentarlo.'}`};
+</script>
+</body>
+</html>
